@@ -1,0 +1,101 @@
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <div class="container col-lg-8">
+        <div style="padding-bottom: 10px">
+            <div class="card text-center bg-light">
+			<font size="5"><b>DeepArtist Bot : I find artist from painting</b></font><br>
+			<font size="2"><b>Made with &#x1F496; by <a href="https://supratimh.github.io">Supratim Haldar</a></b></font>
+                <div class="card-body" style="padding-bottom: 10px">
+                    <input class="card-title form-control" type="text" id="input" name="input" placeholder="Enter image url of jpeg or png file here"/>
+                    <button class="card-text btn btn-outline-primary" id="btn">Who's the artist?</button>
+					<button class="card-text btn btn-outline-primary" id="btn_reset">Reset</button>
+                    <div class="spinner" id="spinner" style="display: none">
+						<div class="double-bounce1"></div>
+						<div class="double-bounce2"></div>
+                    </div>
+                </div>
+                <div class="card-footer bg-white">
+                    <pre class="card-text api-pre" style="padding-bottom: 10px">
+                        <div class="item" id="api_output_1"></div>
+                        <div class="item" id="api_output_2"></div>
+						<div class="item" id="api_output_3"></div>
+                    </pre>
+                </div>
+				<div class="card text-left bg-light" style="padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px">
+					<font size="4"><b><p align="center">Who am I?</p></b></font><br>
+					<font size="3">
+					I am an AI bot, you can call me <i>DeepArtist</i>. Thanks to Deep Learning and a carefully designed Convolution Neural Network, I have thoroughly studied few paintings of following legends, and understood their underlying styles.<br><br>
+					<ul>
+						<li>Vincent van Gogh: (1853 - 1890), Dutch, [Post-Impressionism]</li>
+						<li>Edgar Degas: (1834 - 1917), French, [Impressionism]</li>
+						<li>Pablo Picasso: (1881 - 1973), Spanish, [Cubism]</li>
+						<li>Pierre-Auguste Renoir: (1841 - 1919), French, [Impressionism]</li>
+						<li>Albrecht Durer: (1471 - 1528), German, [Northern Renaissance]</li>
+						<li>Paul Gauguin: (1848 - 1903), French, [Symbolism,Post-Impressionism]</li>
+						<li>Francisco Goya: (1746 - 1828), Spanish, [Romanticism]</li>
+						<li>Rembrandt: (1606 - 1669), Dutch, [Baroque]</li>
+						<li>Alfred Sisley: (1839 - 1899), French,British, [Impressionism]</li>
+						<li>Titian: (1488 - 1576), Italian, [High Renaissance,Mannerism]</li>
+						<li>Marc Chagall: (1887 - 1985), French,Jewish,Belarusian, [Primitivism]</li>
+					</ul>
+					When shown a painting which I have never seen earlier, I can guess the artist with <b>~87% accuracy</b>, by virtue of my intelligence. I'm studying more artists and will be able to identify their art in near future! Thank you, have fun &#128526;
+					</font>
+				</div>
+				<div class="card-footer bg-white">
+					<b>Notes from the developer:</b> For any feedback, comment or suggestion, or just to say Hi, please drop a line anytime to <a href="mailto:supratimh@gmail.com">supratimh@gmail.com</a>. For other Data Science and Machine Learning projects I'm working on, please visit <a href="https://supratimh.github.io">my home page</a>.
+				<div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+
+<script type="text/javascript">
+    function api_call(input) {
+        $.ajax({
+            url: "http://127.0.0.1:5000/api",
+            method: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify(input),
+            success: function( data, jQxhr ){
+				html_artist = "This masterpiece was most likely painted by <b>" + data.artist + "</b>,"
+				html_probability = "and I am <b>" + data.probability + "</b> sure about my guess!"
+				html_img = "<img src=\"" + input + "\" height=\"200px\" width=\"200px\">"
+				console.log(html_img)
+                $("#api_output_1").html(html_artist);
+				$("#api_output_2").html(html_probability);
+				$("#api_output_3").html(html_img);
+                $("#input").val("");
+            },
+            error: function( jqXhr, errorThrown ){
+                $("#api_output_1").html( "There was an error" );
+                console.log( errorThrown );
+            },
+            timeout: 10000
+        });
+    }
+    $( document ).ready(function() {
+        // request when clicking on the button
+        $('#btn').click(function() {
+            // get the input data
+            var input = $("#input").val();
+            api_call(input);
+            input = "";
+        });
+		// reset everything
+        $('#btn_reset').click(function() {
+            // get the input data
+            $("#input").val("");
+			$("#api_output_1").html("");
+			$("#api_output_2").html("");
+			$("#api_output_3").html("");
+        });
+    });
+</script>

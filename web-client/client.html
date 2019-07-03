@@ -1,0 +1,46 @@
+<!-- include ajax -->
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<!-- form, button and output -->
+<center>
+<input type="text" id="input" name="input" size="50" placeholder="Enter image url of jpeg or png file"/>
+<button id="btn">Who's the artist?</button>
+
+<div id="api_output_1" align="left"></div>
+<div id="api_output_2" align="left"></div>
+</center>
+
+<script type="text/javascript">
+    function api_call(input) {
+        $.ajax({
+            url: "http://127.0.0.1:5000/api",
+            method: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify(input),
+            success: function( data, jQxhr ){
+				console.log(data)
+				html_artist = "Artist: " + data.artist
+				html_probability = "Guess Probability: " + data.probability
+                $("#api_output_1").html(html_artist);
+				$("#api_output_2").html(html_probability);
+                $("#input").val("");
+            },
+            error: function( jqXhr, errorThrown ){
+                $("#api_output_1").html( "There was an error" );
+                console.log( errorThrown );
+            },
+            timeout: 10000
+        });
+    }
+    $( document ).ready(function() {
+        // request when clicking on the button
+        $('#btn').click(function() {
+            // get the input data
+            var input = $("#input").val();
+            api_call(input);
+            input = "";
+        });
+    });
+</script>

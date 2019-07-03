@@ -1,0 +1,9 @@
+numpy
+tensorflow
+cv2
+imageio
+os
+flask
+gunicorn
+flask_cors
+serve
