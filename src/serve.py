@@ -44,7 +44,7 @@ def get_model_api():
 	model = make_model()
 
 	# Load pre-trained weights
-	model_weight_path = os.path.join('model', 'weights_deepartist_rn50.h5')
+	#model_weight_path = os.path.join('model', 'weights_deepartist_rn50.h5')
 	model_weight = get_file('weights_deepartist_rn50.h5', "https://www.kaggleusercontent.com/kf/16691928/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..Iw9aXhSjrW0FEsvdvFqePw.M1HsMI6P5ZmsGo9atAL-Ih1dsm4EI1CJ_nxUG9fpzlu0xicHNq0ZmJq0Z3hgDBGqDcPEC8cOeI56XKZXuGxujE20ObBzL9yVKNeXLqUwpUUdWT8uaf-j-yylyvTaLvmS8WdE7XjqGVhzXmicg4dZOknKMZkll5FPdT3ed7Q6Ev4.eWWwzBgvcaiAbomGy1qC3A/weights_deepartist_rn50.h5")
 	model.load_weights(model_weight)
 	model._make_predict_function()
