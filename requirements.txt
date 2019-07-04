@@ -1,6 +1,5 @@
 numpy
 tensorflow
-opencv-python
 imageio
 flask
 gunicorn

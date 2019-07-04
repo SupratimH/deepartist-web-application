@@ -6,7 +6,8 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 import numpy as np
 import imageio
-import cv2
+#import cv2
+from PIL import Image
 import os
 
 
@@ -64,7 +65,9 @@ def get_model_api():
 	def model_api(input_url):
 		train_input_shape = (224, 224)
 		web_image = imageio.imread(input_url)
-		web_image = cv2.resize(web_image, dsize=train_input_shape, )
+		#web_image = cv2.resize(web_image, dsize=train_input_shape, )
+		web_image = Image.fromarray(web_image)
+		web_image = web_image.resize(train_input_shape[0:2])
 		web_image = image.img_to_array(web_image)
 		web_image /= 255.
 		web_image = np.expand_dims(web_image, axis=0)
