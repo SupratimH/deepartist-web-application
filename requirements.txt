@@ -5,4 +5,3 @@ imageio
 flask
 gunicorn
 flask_cors
-serve
