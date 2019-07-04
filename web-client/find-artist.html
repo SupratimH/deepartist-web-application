@@ -60,7 +60,7 @@
 <script type="text/javascript">
     function api_call(input) {
         $.ajax({
-            url: "http://127.0.0.1:5000/api",
+            url: "https://find-artist.herokuapp.com/find_artist",
             method: 'POST',
             contentType: 'application/json',
             data: JSON.stringify(input),
