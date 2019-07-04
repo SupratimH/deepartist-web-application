@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify, json
 from flask_cors import CORS
-from serve import get_model_api
+from src.serve import get_model_api
 
 app = Flask(__name__)
 CORS(app) # needed for cross-domain requests, allow everything by default

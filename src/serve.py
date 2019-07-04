@@ -43,7 +43,7 @@ def get_model_api():
 	model = make_model()
 
 	# Load pre-trained weights
-	model_weight_path = os.path.join('..', 'model', 'model_deepartist_rn50.h5')
+	model_weight_path = os.path.join('model', 'weights_deepartist_rn50.h5')
 	model.load_weights(model_weight_path)
 	model._make_predict_function()
 
