@@ -1,6 +1,6 @@
 numpy
 tensorflow
-cv2
+opencv
 imageio
 os
 flask
