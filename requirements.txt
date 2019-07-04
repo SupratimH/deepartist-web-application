@@ -2,7 +2,6 @@ numpy
 tensorflow
 opencv-python
 imageio
-os
 flask
 gunicorn
 flask_cors
