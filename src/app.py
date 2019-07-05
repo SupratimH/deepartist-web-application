@@ -21,7 +21,7 @@ def index():
 def keep_alive():
 	while True:
 		print("I am alive!!")
-		sleep(9000)
+		sleep(900)
 
 
 # HTTP Errors handlers
