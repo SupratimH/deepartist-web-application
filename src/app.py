@@ -2,6 +2,8 @@ from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 from src.serve import get_model_api
 import os
+from time import sleep
+
 
 app = Flask(__name__)
 CORS(app) # needed for cross-domain requests, allow everything by default
@@ -12,6 +14,14 @@ model_api = get_model_api()
 def index():
     #return "<center><b>Welcome to DeepArtist, the art-lover bot!<b></center>"
 	return render_template('find-artist.html')
+
+
+# keep_alive route
+@app.route('/keep_alive')
+def keep_alive():
+	while True:
+		print("I am alive!!")
+		sleep(9000)
 
 
 # HTTP Errors handlers

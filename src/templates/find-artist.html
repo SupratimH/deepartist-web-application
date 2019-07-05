@@ -73,9 +73,11 @@
             },
             error: function( jqXhr, errorThrown ){
                 $("#api_output_1").html( "There was an error" );
+				$("#api_output_2").html("");
+				$("#api_output_3").html("");
                 console.log( errorThrown );
             },
-            timeout: 10000
+            timeout: 60000
         });
     }
     $( document ).ready(function() {
