@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, render_template, send_from_directory
+from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 from src.serve import get_model_api
 import os
@@ -10,8 +10,8 @@ model_api = get_model_api()
 # default route
 @app.route('/')
 def index():
-    return "<center><b>Welcome to DeepArtist, the art-lover bot!<b></center>"
-	#return render_template('find-artist.html')
+    #return "<center><b>Welcome to DeepArtist, the art-lover bot!<b></center>"
+	return render_template('find-artist.html')
 
 
 # HTTP Errors handlers

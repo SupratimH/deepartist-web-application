@@ -41,10 +41,12 @@ def get_model_api():
 		web_image /= 255.
 		web_image = np.expand_dims(web_image, axis=0)
 
-		# Test model on random input data.
+		# Test model on input data.
 		input_shape = input_details[0]['shape']
-		# change the following line to feed into your own data.
+
+		# Feed the image data
 		input_data = np.array(np.random.random_sample(input_shape), dtype=np.float32)
+		input_tensor= tf.convert_to_tensor(input_data, np.float32)
 		interpreter.set_tensor(input_details[0]['index'], web_image)
 
 		interpreter.invoke()
