@@ -20,8 +20,8 @@ def index():
 @app.route('/keep_alive')
 def keep_alive():
 	while True:
-		print("I am alive!!")
-		sleep(900)
+		print("DeepArtist is alive!!")
+		sleep(60)
 
 
 # HTTP Errors handlers
