@@ -4,7 +4,7 @@ Ever came across a piece of art and not able to recollect the legend behind the 
 * https://find-artist.herokuapp.com
 * https://supratimh.github.io/find-artist
 
-<div style="width:100%;height:0;padding-bottom:82%;position:relative;"><iframe src="https://giphy.com/embed/PzY2K7SaqIEyA" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/art-PzY2K7SaqIEyA">via GIPHY</a></p>
+<iframe src="https://giphy.com/embed/PzY2K7SaqIEyA" width="480" height="394" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/art-PzY2K7SaqIEyA">via GIPHY</a></p>
 
 ## Who is DeepArtist AI bot?
 DeepArtist is a Deep Learning model, built with a carefully designed Convolution Neural Network. It has been trained to understand the underlying painting styles of the following legends.
@@ -59,5 +59,7 @@ The code to deploy/serve DeepArtist (or any ML or DL model, for that matter) on 
 
 ## Contact
 :love_letter: For any feedback or questions or just to say "Hi", drop me a line anytime at supratimh[at]gmail[dot]com.
-To read about other projects I am working on, please visit [my home page](https://supratimh.github.io)
+
+To read about other projects I am working on, please visit [my home page](https://supratimh.github.io).
+
 Thank you for reading :heart:
