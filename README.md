@@ -57,6 +57,10 @@ The code to deploy/serve DeepArtist (or any ML or DL model, for that matter) on 
 * Procfile - To tell Heroku about how to run this app.
 * NOTE: If your saved model is smaller than 100 MB, it is advisable to commit it into Github and make the app read from the corresponding directory. However, if it is larger, then save it on a remote storage (like Google Drive, Dropbox etc) and make the app download and read it from there. The second approach has been taken for this application.
 
+## References
+* This wonderful tutorial by Guillaume Genthial - https://guillaumegenthial.github.io/serving.html
+* And, this wonderful series by Rachael Tatman - https://www.kaggle.com/rtatman/careercon-intro-to-apis
+
 ## Contact
 :love_letter: For any feedback or questions or just to say "Hi", drop me a line anytime at supratimh[at]gmail[dot]com.
 
