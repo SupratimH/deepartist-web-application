@@ -1,5 +1,5 @@
 # DeepArtist Web Application
-## An AI bot which can identify artist from paintings
+## An AI bot which can identify artist of paintings
 Ever came across a piece of art and not able to recollect the legend behind the creation. DeepArtist AI bot is there for your rescue. Access it through one of the following links. 
 * https://find-artist.herokuapp.com
 * https://supratimh.github.io/find-artist
