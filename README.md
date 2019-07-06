@@ -4,7 +4,7 @@ Ever came across a piece of art and not able to recollect the legend behind the 
 * https://find-artist.herokuapp.com
 * https://supratimh.github.io/find-artist
 
-<iframe src="https://giphy.com/embed/PzY2K7SaqIEyA" width="480" height="394" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/art-PzY2K7SaqIEyA">via GIPHY</a></p>
+<center><img src="https://media.giphy.com/media/PzY2K7SaqIEyA/giphy.gif" width="400" height="400"></center>
 
 ## Who is DeepArtist AI bot?
 DeepArtist is a Deep Learning model, built with a carefully designed Convolution Neural Network. It has been trained to understand the underlying painting styles of the following legends.
