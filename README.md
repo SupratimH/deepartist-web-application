@@ -21,7 +21,7 @@ DeepArtist is a Deep Learning model, built with a carefully designed Convolution
 * Titian: (1488 - 1576), Italian, [High Renaissance,Mannerism]
 * Marc Chagall: (1887 - 1985), French,Jewish,Belarusian, [Primitivism]
 
-The code training the model is available here. Accuracy of the current model on unseen paintings of the above artists is approx 87%.
+The code for training the model is available [here](https://github.com/SupratimH/applying-ml-use-cases/tree/master/DeepArtist-Identify-Artist-From-Art). <b>Accuracy of the current model on unseen paintings of the above artists is approx 87%.<b>
 The model is being improved and trained on sample paintings of more artists.
 
 ## What does this repo contain?
