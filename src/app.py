@@ -17,7 +17,7 @@ def index():
 
 
 # keep_alive route
-@app.route('/keep_alive')
+@app.route('/keep_alive', methods=['POST'])
 def keep_alive():
 	while True:
 		print("DeepArtist is alive!!")
