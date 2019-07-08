@@ -21,7 +21,7 @@ def index():
 def keep_alive():
 	while True:
 		print("DeepArtist is alive!!")
-		sleep(60)
+		sleep(15)
 
 
 # HTTP Errors handlers
