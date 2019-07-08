@@ -62,6 +62,6 @@ The code to deploy/serve DeepArtist (or any ML or DL model, for that matter) on 
 * And, this wonderful series by Rachael Tatman - https://www.kaggle.com/rtatman/careercon-intro-to-apis
 
 ## Contact
-:love_letter: For any feedback or questions or just to say "Hi", drop me a line anytime at supratimh@gmail.com.
-<br>To read about other projects I am working on, please visit [my home page](https://supratimh.github.io).
-<br>Thank you for reading :heart:
+:e-mail:  For any feedback or questions or just to say "Hi", drop me a line anytime at supratimh@gmail.com.
+<br>:books:  To read about other projects I am working on, please visit [my home page](https://supratimh.github.io).
+<br>:heart:  Thank you for reading
