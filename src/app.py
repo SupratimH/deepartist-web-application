@@ -3,6 +3,7 @@ from flask_cors import CORS
 from src.serve import get_model_api
 import os
 from time import sleep
+from multiprocessing import Process
 
 
 app = Flask(__name__)
@@ -16,8 +17,8 @@ def index():
 	return render_template('find-artist.html')
 
 
-# keep_alive route
-@app.route('/keep_alive', methods=['POST'])
+# keep_alive method - always run a concurrent process
+#@app.route('/keep_alive')
 def keep_alive():
 	while True:
 		print("DeepArtist is alive!!")
@@ -58,4 +59,7 @@ def api():
 
 if __name__ == '__main__':
     #app.run(host='0.0.0.0', debug=True)
-	app.run(debug=False)
+	p = Process(target=keep_alive)
+	p.start()
+	app.run(debug=False, use_reloader=False)
+	p.join()
