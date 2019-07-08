@@ -21,7 +21,7 @@ DeepArtist is a Deep Learning model, built with a carefully designed Convolution
 * Titian: (1488 - 1576), Italian, [High Renaissance,Mannerism]
 * Marc Chagall: (1887 - 1985), French,Jewish,Belarusian, [Primitivism]
 
-The code for training the model is available [here](https://github.com/SupratimH/applying-ml-use-cases/tree/master/DeepArtist-Identify-Artist-From-Art). <b>Accuracy of the current model on unseen paintings of the above artists is approx 87%.<b>
+The code for training the model is available [here](https://github.com/SupratimH/applying-ml-use-cases/tree/master/DeepArtist-Identify-Artist-From-Art). <b>Accuracy of the current model on unseen paintings of the above artists is approx 87%.</b>
 The model is being improved and trained on sample paintings of more artists.
 
 ## What does this repo contain?
@@ -62,8 +62,6 @@ The code to deploy/serve DeepArtist (or any ML or DL model, for that matter) on 
 * And, this wonderful series by Rachael Tatman - https://www.kaggle.com/rtatman/careercon-intro-to-apis
 
 ## Contact
-:love_letter: For any feedback or questions or just to say "Hi", drop me a line anytime at supratimh[at]gmail[dot]com.
-
-To read about other projects I am working on, please visit [my home page](https://supratimh.github.io).
-
-Thank you for reading :heart:
+:love_letter: For any feedback or questions or just to say "Hi", drop me a line anytime at supratimh@gmail.com.
+<br>To read about other projects I am working on, please visit [my home page](https://supratimh.github.io).
+<br>Thank you for reading :heart:
