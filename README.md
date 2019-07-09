@@ -28,7 +28,8 @@ The model is being improved and trained on sample paintings of more artists.
 The code to deploy/serve DeepArtist (or any ML or DL model, for that matter) on cloud, as a web application. At present, it is deployed on Heroku and can be accessed through the links provided above.
 
 ## Instructions to use DeepArtist Bot application
-<img src="https://github.com/SupratimH/deepartist-web-application/blob/master/demo/DeepArtist_Demo_20190711.gif">
+<img src="https://github.com/SupratimH/deepartist-web-application/blob/master/demo/DeepArtist_Demo_20190711.gif" width="800" height="450">
+
 1. Open the application through the links provided above.
 2. From web, copy the url/location/address of the image jpeg or png file (usually by right click on the image --> copy image address option). The list of artists it can identify are provided above.
 3. Paste the url in text box and click "Who's the artist?" button.
